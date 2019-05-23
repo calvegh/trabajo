@@ -12,8 +12,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
+import os
 
-driver = webdriver.Firefox(executable_path=r'C:\Users\carlos\Documents\Semestre 13\TICS\Trabajo\trabajo\geckodriver')
+driver = webdriver.Firefox(executable_path=os.path.join(os.getcwd(),'geckodriver'))
 
 driver.set_page_load_timeout(200)
 driver.get("https://results.chronotrack.com/event/results/event/event-49653")
@@ -57,9 +58,3 @@ for i in nombre:
 time.sleep(5)
 driver.quit()
 print("hola1")
-
-Print("prueba")
-Print("prueba")
-Print("prueba")
-Print("prueba")
-Print("prueba")
